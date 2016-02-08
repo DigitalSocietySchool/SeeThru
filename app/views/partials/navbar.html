@@ -1,0 +1,34 @@
+<ul ng-show="!viewingQuiz" class="nav navbar-nav">
+  <li class="active">
+    <a ng-click="scrollDown($event, '#landing-1')">Home</a>
+    <span class="nav-accent"></span>
+  </li>
+  <li>
+    <a ng-click="scrollDown($event, '#landing-2')">About Us</a>
+    <span class="nav-accent"></span>
+  </li>
+  <li>
+    <a ng-click="scrollDown($event, '#landing-3')">Learn With Us</a>
+    <span class="nav-accent"></span>
+  </li>
+  <li class="nav-highlight">
+    <a ng-href="#">Take Action</a>
+  </li>
+</ul>
+<ul ng-show="viewingQuiz" class="nav navbar-nav">
+  <li ng-click="goBack()" class="active">
+    <a>Home</a>
+    <span class="nav-accent"></span>
+  </li>
+  <li ng-click="goBack()">
+    <a>About Us</a>
+    <span class="nav-accent"></span>
+  </li>
+  <li ng-click="goBack()">
+    <a>Learn With Us</a>
+    <span class="nav-accent"></span>
+  </li>
+  <li ng-click="goBack()" class="nav-highlight">
+    <a>Take Action</a>
+  </li>
+</ul>

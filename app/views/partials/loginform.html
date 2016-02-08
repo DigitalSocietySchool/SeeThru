@@ -1,0 +1,27 @@
+<div class="auth-form-container">
+  <form name="loginForm" novalidate class="simple-form" autocomplete="off">
+    <div class="row">
+      <div ng-class="{ 'has-error' : (loginForm.$submitted || loginForm.email.$touched) && loginForm.email.$error.required }" class="form-group col-lg-12">
+        <input  type="text" class="form-control" ng-model="user.email" name="email" required="" placeholder="Email address" autocomplete="off"/>
+      </div>
+      <div ng-class="{ 'has-error' : (loginForm.$submitted || loginForm.password.$touched) && loginForm.password.$error.required }" class="form-group col-lg-12">
+        <input  type="password" class="form-control" ng-model="user.password" name="password" required="" placeholder="Password" autocomplete="off"/>
+      </div>
+      <div class="form-group col-lg-12 login-submit-row">
+        <button type="submit" ng-click="submit(user, loginForm)" ng-disabled="loading" class="btn btn-default auth-submit">Login</button>
+      </div>
+    </div>
+    <div class="row">
+      <div ng-switch="incorrectPassword">
+        <div ng-switch-when="true">
+          Incorrect email or password
+        </div>
+      </div>
+      <div ng-switch="serverError">
+        <div ng-switch-when="true">
+          An error occurred. Please try again
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

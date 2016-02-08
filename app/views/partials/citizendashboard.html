@@ -1,0 +1,93 @@
+<div class="col-lg-12">
+  <div class="dashboard-sidebar col-lg-2">
+    <ul>
+      <li>
+        <a class="active" ng-href="#/dashboard">Dashboard</a>
+      </li>
+      <li>
+        <a href="">Notifications</a>
+      </li>
+      <li>
+        <a ng-href="#/collection/create">New collection</a>
+      </li>
+      <li>
+        <a ng-href="#/dropoff/find">New dropoff</a>
+      </li>
+      <li>
+        <a href="">Edit profile</a>
+      </li>
+      <li>
+        <a href="">Settings</a>
+      </li>
+      <li>
+        <a href="">Logout</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-lg-6">
+    <div class="profile-info-container col-lg-12">
+      <div class="dashboard-image col-lg-6" ng-switch="data.thumbnail_url">
+        <img ng-switch-when="undefined" ng-src=""/>
+        <img ng-switch-default ng-src="{{baseURL}}{{data.thumbnail_url}}"/>
+      </div>
+      <div class="profile-details col-lg-6">
+        <span class="username">{{data.first_name}} {{data.last_name}}</span>
+        <div class="profile-details-row">
+          <div class="image-container">
+            <img src="images/icons/clock.svg"/>
+          </div>
+          <span class="row-text">
+            December 2015
+          </span>
+        </div>
+        <div class="profile-details-row">
+          <div class="image-container">
+            <img src="images/icons/marker.svg"/>
+          </div>
+          <span class="row-text">
+            Koramangla
+          </span>
+        </div>
+        <div class="profile-details-row">
+          <div class="image-container">
+            <img src="images/icons/language.svg"/>
+          </div>
+          <span class="row-text">
+            English
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="collections-title col-lg-12">
+      <span>Collections</span>
+    </div>
+    <div class="collections-container col-lg-12">
+      <ul class="collections-list">
+        <li class="future">
+          <div class="icon">
+            <img src="images/icons/battery-future.svg"/>
+          </div>
+          <span class="collection-info">
+            01.01.16, 09:00 AM at Koramangla
+          </span>
+        </li>
+        <li>
+          <div class="icon">
+            <img src="images/icons/disk.svg"/>
+          </div>
+          <span class="collection-info">
+            29.11.15, 11:00 AM at Koramangla
+          </span>
+        </li>
+        <li>
+          <div class="icon">
+            <img src="images/icons/cable.svg"/>
+          </div>
+          <span class="collection-info">
+            27.11.15, 03:00 PM at Koramangla
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
